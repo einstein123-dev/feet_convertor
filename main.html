@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="results"></div>
+        <input type="number" id="number">
+        <button id="button">Convert</button>
+    </div>
+
+    <script>
+            
+            let button = document.querySelector('#button');
+            let div = document.querySelector('#results');
+            button.onclick = ()=>{
+                
+                let distance = document.querySelector('#number').value;
+                let {miles, yards, feet} = convertFeet(distance);
+
+                let result = `miles:${miles}, yards:${yards}, feet:${feet}`;
+                div.innerHTML = result;
+            }
+            
+    </script>
+    <script src="./main.js"></script>
+</body>
+</html>
